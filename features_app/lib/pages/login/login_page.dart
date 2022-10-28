@@ -1,9 +1,9 @@
-import 'package:features_app/pages/excercise_three.dart';
-import 'package:features_app/pages/exercise_one.dart';
-import 'package:features_app/pages/exercise_two.dart';
+import 'package:features_app/pages/library/excercise_three.dart';
+import 'package:features_app/pages/excersie_four.dart';
+import 'package:features_app/pages/playing_with_buttons/exercise_one.dart';
+import 'package:features_app/pages/login/exercise_two.dart';
 import 'package:flutter/material.dart';
-
-import '../functions/custom_button.dart';
+import '../../functional/custom_button.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -51,6 +51,15 @@ class LoginPage extends StatelessWidget {
               }),
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              button("Playing with colors", () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ExcerciseFourScreen()));
+              }),
+            ],
+          )
         ],
       ),
     );
